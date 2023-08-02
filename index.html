@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tugas Konversi</title>
+</head>
+<body>
+  <script>
+    // Function to convert numerical grade to letter grade
+    function convertToLetterGrade(grade) {
+      if (grade >= 90) {
+        return 'A';
+      } else if (grade >= 80) {
+        return 'B';
+      } else if (grade >= 70) {
+        return 'C';
+      } else if (grade >= 60) {
+        return 'D';
+      } else {
+        return 'F';
+      }
+    }
+
+    // Get numerical grade from user
+    var numericalGrade = prompt('Input Nilai');
+    
+    // Convert the input to a number (input comes as a string)
+    numericalGrade = parseFloat(numericalGrade);
+    
+    // Check if the input is a valid number
+    if (!isNaN(numericalGrade)) {
+      // Call the function to convert numerical to letter grade
+      var letterGrade = convertToLetterGrade(numericalGrade);
+      
+      // Display the result using alert
+      alert('Nilai Anda: ' + letterGrade);
+    } else {
+      alert('Invalid input. Please enter a valid numerical grade.');
+    }
+  </script>
+</body>
+</html>
